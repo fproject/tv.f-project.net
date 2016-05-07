@@ -1,19 +1,1 @@
-<?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
-$this->menu=array(
-    array('label'=>'Project Dashboard', 'url'=>array('/project')),
-    array('label'=>'User Management', 'url'=>array('/user')),
-    array('label'=>'RBAC Management', 'url'=>array('/rights')),
-);
-
-?>
-
-<h1>Welcome to <?php echo CHtml::encode(Yii::app()->name); ?></h1>
-
-<?php if(!Yii::app()->user->isGuest):?>
-    <p>
-        You last logged in on <?php echo Yii::app()->user->lastLoginTime; ?>.
-    </p>
-<?php endif;?>
+<?php/* @var $this SiteController */$this->pageTitle=Yii::app()->name;$this->menu=array(    array('label'=>'Project Dashboard', 'url'=>array('/project')),    array('label'=>'User Management', 'url'=>array('/user')),    array('label'=>'RBAC Management', 'url'=>array('/rights')),);/** @var string $baseUrl */$baseUrl = Yii::app()->baseUrl;$this->widget('CFlexWidget', array(        'name'=>'EmployeeManager',        'baseUrl'=>$baseUrl.Yii::app()->params['flexAppBasePath'],        'rslBaseUrl'=>$baseUrl.Yii::app()->params['flexRSLBasePath'],        'moduleBaseUrl'=>$baseUrl.Yii::app()->params['flexModuleBasePath'],        'width'=>'100%',        'height'=>'100%',        'align'=>'left',        'enableHistory'=>'false',        'allowFullScreen'=>'true',        'allowFullScreenInteractive'=>'true',        'flashVars'=>array(            'projectId'=>0,            'loginUserId'=>0,            'userToken'=>str_replace('"', '\\"', ''),        ),    ));?>

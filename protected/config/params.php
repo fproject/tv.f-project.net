@@ -38,4 +38,11 @@ return [
                 ],
             'excludeRoutes' => ['/', '/index', 'site/', 'site/login', 'site/logout', 'file/download'],
         ],
+
+    //these two params are used in FlexWidget to display Apache Flex application
+    'flexAppBasePath' => '/flexapps',
+    'flexRSLBasePath' => '/flexapps',
+    'flexModuleBasePath' => '/flexapps',
+    //The path to static resource folder
+    'flexResourceBaseUrl' => '/flexapps',
 ];
